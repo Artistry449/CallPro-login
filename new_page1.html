@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine invite verification xD</title>
+</head>
+<style>
+    #button-container {
+        margin-top: 9rem;
+        position: relative;
+        width: 500px;
+        height: 500px;
+    }
+
+    #random-button {
+        position: absolute;
+
+    }
+
+    #yesButton {
+        margin-left: 165px;
+        margin-bottom: -10px;
+    }
+
+    .btns {
+        padding: 1rem;
+    }
+</style>
+
+<body>
+
+    <div class="mainSection">
+        <h1>You really want to be my valentine?</h1>
+    </div>
+    <div id="button-container">
+        <button id="random-button" class="btns">Болмооргүй байна өө</button>
+        <button id="yesButton" class="btns">Өө, тэгье л дээ xD</button>
+    </div>
+
+    <script>
+        const button = document.getElementById('random-button');
+        const container = document.getElementById('button-container');
+
+        button.addEventListener('mouseenter', () => {
+            button.style.display = 'none';
+
+            const containerWidth = container.clientWidth;
+            const containerHeight = container.clientHeight;
+
+            const randomX = Math.random() * (containerWidth - button.clientWidth);
+            const randomY = Math.random() * (containerHeight - button.clientHeight);
+
+            button.textContent = "think again"
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+
+            button.style.display = 'block';
+        });
+
+        const yesButton = document.getElementById('yesButton');
+
+        yesButton.addEventListener('click', () => {
+            alert("Daa tgul bolzoon dre uulziy haira kk. \nУулзах газар: танай гэр\nУулзах цаг: 14 Feb 2024, 13:00pm");
+        })
+
+
+    </script>
+</body>
+
+</html>

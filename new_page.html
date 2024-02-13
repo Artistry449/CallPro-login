@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Invitation</title>
+    <style>
+        * {
+            text-decoration: none;
+            color: black;
+        }
+
+        .responceBtn {
+            padding: 0.5rem 1rem;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Will you be valentine?</h1>
+    <button class="responceBtn" id="YES"><a href="./new_page1.html">YES</a></button>
+    <button class="responceBtn" id="NO">No</button>
+
+    <script>
+
+        document.getElementById("NO").addEventListener('click', function () {
+            var yesButton = document.getElementById("YES");
+            var currentFontSize = window.getComputedStyle(yesButton).fontSize;
+            var newFontSize = parseFloat(currentFontSize) * 1.1;
+            yesButton.style.fontSize = newFontSize + 'px';
+        });
+    </script>
+</body>
+
+</html>
