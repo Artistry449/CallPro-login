@@ -9,13 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
         var password = document.getElementsByName('psw')[0].value;
 
         if (username.trim() === '' || password.trim() === '') {
-            alert('Нэр нууц үгээ оруулна уу');
+            alert('Нэр нууц үгээ оруулна уу.');
             return false;
         }
         else if (username.trim() === 'Nomin123' || password.trim() === 'N0m1n$trongP@$$w0rd123') {
-
             window.location.href = './new_page.html';
             return true;
+        }
+        else {
+            alert('Таны нэр эсвэл нууц үг буруу байна.');
+            return false;
         }
     }
 });
